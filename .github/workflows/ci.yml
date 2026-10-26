@@ -57,7 +57,7 @@ jobs:
        # Test Docker image
     - name: Test Docker image locally
       run: |
-       docker run -d --name democyber-test -p 8080:8080 $DOCKER_IMAGE_NAME
+       docker run -d --name democyber-test -p 8081:8080 $DOCKER_IMAGE_NAME
        sleep 10
        curl -f http://localhost:8081 || echo "App not responding"
        docker stop democyber-test
